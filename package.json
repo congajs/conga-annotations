@@ -15,7 +15,7 @@
     "annotations"
   ],
   "author": "lampjunkie",
-  "license": "BSD",
+  "license": "MIT",
   "dependencies": {
     "StringScanner": "0.0.3"
   },
