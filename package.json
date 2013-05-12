@@ -1,0 +1,27 @@
+{
+  "name": "conga-annotations",
+  "version": "0.0.1",
+  "description": "annotation parser library",
+  "directories": {
+    "test": "test"
+  },
+  "main": "./index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "repository": "",
+  "keywords": [
+    "annotation",
+    "annotations"
+  ],
+  "author": "lampjunkie",
+  "license": "BSD",
+  "dependencies": {
+    "StringScanner": "0.0.3"
+  },
+  "devDependencies": {
+     "mocha": "1.9.0",
+     "should": "1.2.2"
+  },
+  "readmeFilename": "README.md"
+}
