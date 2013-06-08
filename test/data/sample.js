@@ -5,13 +5,13 @@
 var Sample = {
   
     /**
-     * @MyProperty("the-value", something="hello", foos=["one", "two", "three"])
+     * @MyProperty("the-value", something="hello", foos=["one","two","three"])
      * @var {String}
      */
     myProperty: "hello",
     
     /**
-     * @MyMethod("the-value", someHash={foo:"bar"})
+     * @MyMethod("the-value", singleHash={"foo":true}, someHash={foo:"bar", another:"one"}, anArray=["one", "two", "three"])
      * @MyOtherMethod("something")
      */
     myMethod: function(){

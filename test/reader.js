@@ -54,8 +54,16 @@ describe('Reader:', function() {
       methodAnnotations[0].value.should.eql('the-value');
     });
     
-    it('has correct values', function() {
-      methodAnnotations[0].someHash.should.eql({ "foo" : "bar" });
+    it('has correct single hash value', function() {
+      methodAnnotations[0].singleHash.should.eql({ "foo" : true });
+    });
+
+    it('has correct hash value', function() {
+      methodAnnotations[0].someHash.should.eql({ "foo" : "bar", "another" : "one" });
+    });
+
+    it('has correct array value', function() {
+      methodAnnotations[0].anArray.should.eql(['one', 'two', 'three']);
     });
   });
   
