@@ -3,6 +3,8 @@ var Registry = require('../lib/registry');
 var Reader = require('../lib/reader');
 var MyClass = require('./annotations/my-class');
 var MyMethod = require('./annotations/my-method');
+var MyProperty = require('./annotations/my-property');
+var NamespaceProperty = require('./annotations/namespace-property');
 
 describe('Reader:', function() {
   
@@ -14,6 +16,8 @@ describe('Reader:', function() {
   // register all of our test annotations
   registry.registerAnnotation(__dirname + '/annotations/my-class.js');
   registry.registerAnnotation(__dirname + '/annotations/my-method.js');
+  registry.registerAnnotation(__dirname + '/annotations/my-property.js');
+  registry.registerAnnotation(__dirname + '/annotations/namespace-property.js');
   
   // parse the sample file
   reader.parse(samplePath);
@@ -42,7 +46,7 @@ describe('Reader:', function() {
     
     var methodAnnotations = reader.getMethodAnnotations();
 
-    if('returns a valid annotation', function(){
+    it('returns a valid annotation', function(){
       methodAnnotations[0].should.be.an.instanceof(MyMethod);
     });
     
@@ -65,6 +69,21 @@ describe('Reader:', function() {
     it('has correct array value', function() {
       methodAnnotations[0].anArray.should.eql(['one', 'two', 'three']);
     });
+  });
+
+  // property annotations
+  describe('getPropertyAnnotations', function() {
+
+    var propertyAnnotations = reader.getPropertyAnnotations();
+
+    it('returns a valid property', function(){
+      propertyAnnotations[0].should.be.an.instanceOf(MyProperty);
+    });
+
+    it('returns a valid namespace property', function(){
+      propertyAnnotations[1].should.be.an.instanceOf(NamespaceProperty);
+    });
+
   });
   
 });

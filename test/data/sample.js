@@ -11,6 +11,12 @@ var Sample = {
     myProperty: "hello",
     
     /**
+     * @Namespace:Property("test")
+     * @type {String}
+     */
+    namespaceProperty: "namespaced annotation",
+
+    /**
      * @MyMethod("the-value", singleHash={"foo":true}, someHash={foo:"bar", another:"one"}, anArray=["one", "two", "three"])
      * @MyOtherMethod("something")
      */
