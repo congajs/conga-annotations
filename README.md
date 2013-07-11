@@ -2,6 +2,31 @@
 
 ## Overview
 
+This is a Node.js library which allows you to add annotations describing metdata data
+about constructors, methods, and properties within javascript files.
+
+Example:
+
+
+    /**
+     * @MyConstructorAnnotation("some value")
+     */
+    function HelloWorld(){}
+
+    HelloWorld.prototype = {
+        
+        /**
+         * @MyPropertyAnnotation(foo=[1,2,3,4], bar={"hello":"there"})
+         */
+        myProperty: 'foo',
+
+        /**
+         * @MyMethodAnnotation("foobar", something="hello")
+         */
+        myMethod: function(){
+
+        }
+    }
 
 
 ## Installation
