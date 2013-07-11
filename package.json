@@ -9,7 +9,10 @@
   "scripts": {
     "test": "mocha test/*.js"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/congajs/conga-annotations.git"
+  },
   "keywords": [
     "annotation",
     "annotations"
