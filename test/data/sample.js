@@ -25,7 +25,23 @@ var Sample = {
     },
     
     /**
-     * @Blah
+     * @MyMethod("multi-line value",
+     *  singleHash={"foo":true},
+     *  someHash={
+     *      "here":"is",
+     *      "a":"multi",
+     *      "line":"hash"
+     *      
+     *  }
+     *  anArray=[
+     *  "this", 
+     *  "is", 
+     *  "in", 
+     *  "a***", 
+     *  "multi-", 
+     *  "line"
+     *  ]
+     * )
      */
     anotherMethod: function(){
       

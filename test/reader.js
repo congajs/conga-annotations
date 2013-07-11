@@ -69,6 +69,17 @@ describe('Reader:', function() {
     it('has correct array value', function() {
       methodAnnotations[0].anArray.should.eql(['one', 'two', 'three']);
     });
+
+    it('has correct multi-line annotation', function() {
+      methodAnnotations[1].should.be.an.instanceof(MyMethod);
+    });
+
+    it('has correct single hash value (multi-line)', function() {
+
+      console.log(methodAnnotations[1]);
+
+      methodAnnotations[1].singleHash.should.eql({ "foo" : true });
+    });
   });
 
   // property annotations
