@@ -45,6 +45,13 @@ var Sample = {
      */
     anotherMethod: function(){
       
+    },
+
+    /**
+     * @MyMethod
+     */
+    methodWithoutParenthesis: function(){
+
     }
     
 };

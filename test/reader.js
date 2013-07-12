@@ -75,10 +75,11 @@ describe('Reader:', function() {
     });
 
     it('has correct single hash value (multi-line)', function() {
-
-      console.log(methodAnnotations[1]);
-
       methodAnnotations[1].singleHash.should.eql({ "foo" : true });
+    });
+
+    it('has correct target without parenthesis', function() {
+      methodAnnotations[2].target.should.eql('methodWithoutParenthesis');
     });
   });
 
