@@ -74,6 +74,17 @@ Example:
          */
         sample: 'default value for sample',
         
+        /**
+         * Optional initialization method that
+         * can be used to transform data
+
+         * @param  {Object} data
+         * @return {void}
+         */
+        init: function(data){
+            // do something with data
+        }
+        
     });
 
 

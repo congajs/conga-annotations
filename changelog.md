@@ -1,6 +1,15 @@
 Changelog
 =========
 
+0.1.1
+-----
+
+July 13, 2013
+
+  * Added optional init() method to annotations so that incoming data can be transformed
+    if needed.
+
+
 0.1.0
 -----
 
