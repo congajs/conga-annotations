@@ -1,17 +1,15 @@
-var Annotation = require('../../lib/annotation');
+var Annotation = require('../../lib/Annotation');
 
-var MyMethod = function(data){
-  this.value = data['__value'];
-  this.singleHash = data['singleHash'];
-  this.someHash = data['someHash'];
-  this.anArray = data['anArray'];
-};
+module.exports = Annotation.extend({
 
-MyMethod.annotation = 'MyMethod';
-MyMethod.targets = [Annotation.METHOD];
-MyMethod.prototype.value = null;
-MyMethod.prototype.singleHash = null;
-MyMethod.prototype.someHash = null;
-MyMethod.prototype.anArray = null;
+	annotation: 'MyMethod',
 
-module.exports = MyMethod;
+	targets: [Annotation.METHOD],
+
+	singleHash: {},
+
+	someHash: {},
+
+	anArray: []
+	
+});

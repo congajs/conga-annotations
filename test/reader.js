@@ -36,6 +36,10 @@ describe('Reader:', function() {
 			constructorAnnotations[0].should.be.an.instanceof(MyClass);
 		});
 
+		it('has a correct annotation name', function() {
+			constructorAnnotations[0].annotation.should.eql('MyClass');
+		});
+
 		it('has a correct target', function() {
 			constructorAnnotations[0].target.should.eql('Sample');
 		});
@@ -53,6 +57,10 @@ describe('Reader:', function() {
 
 		it('returns a valid annotation', function(){
 			methodAnnotations[0].should.be.an.instanceof(MyMethod);
+		});
+
+		it('has a correct annotation name', function() {
+			methodAnnotations[0].annotation.should.eql('MyMethod');
 		});
 		
 		it('has a correct target', function() {
@@ -97,16 +105,24 @@ describe('Reader:', function() {
 
 		var propertyAnnotations = reader.getPropertyAnnotations();
 
-		it('returns a valid property', function(){
+		it('returns a valid property', function() {
 			propertyAnnotations[0].should.be.an.instanceOf(MyProperty);
+		});
+
+		it('has a correct annotation name', function() {
+			propertyAnnotations[0].annotation.should.eql('MyProperty');
 		});
 
 		it('returns a valid value', function() {
 			propertyAnnotations[0].value.should.eql('my value');
 		});
 
-		it('returns a valid namespace property', function(){
+		it('returns a valid namespace property', function() {
 			propertyAnnotations[1].should.be.an.instanceOf(NamespaceProperty);
+		});
+
+		it('has a correct namespaced annotation name', function() {
+			propertyAnnotations[1].annotation.should.eql('Namespace:Property');
 		});
 
 	});

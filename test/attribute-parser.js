@@ -10,7 +10,7 @@ describe('AttributeParser:', function() {
 	var attributes = parser.parse(comment);
 
 	it('returns a correct __value', function(){
-		attributes.__value.should.eql('this is a value');
+		attributes.value.should.eql('this is a value');
 	});
 
 	it('returns a correct string value', function(){

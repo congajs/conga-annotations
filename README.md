@@ -38,48 +38,49 @@ Example:
 ### Create an Annotation
 
     // my-constructor-annotation.js
+    // ----------------------------
+
     var Annotation = require('conga-annotations').Annotation;
 
-    var MyConstructorAnnotation = function(data){
-        this.value = (typeof data.__value !== 'undefined') ? data.__value : 'default value';
-        this.sample = (typeof data.sample !== 'undefined') ? data.sample : 'default value';
-    };
+    module.exports = Annotation.extend({
 
-    /**
-     * Define the annotation string to find
-     * 
-     * @var {String}
-     */
-    MyConstructorAnnotation.annotation = 'MyConstructorAnnotation';
+        /**
+         * The name of the annotation
 
-    /**
-     * Define the targets that the annotation can be applied to
-     * 
-     * Possible targets: Annotation.CONSTRUCTOR, Annotation.METHOD, Annotation.PROPERTY
-     *
-     * @var {Array}
-     */
-    MyConstructorAnnotation.targets = [Annotation.CONSTRUCTOR];
+         * @type {String}
+         */
+        annotation: 'MyConstructorAnnotation',
 
-    /**
-     * The value of the annotation
-     *
-     * @type {String}
-     */
-    MyConstructorAnnotation.prototype.value = null;
+        /**
+         * The possible targets
+         *
+         * (Annotation.CONSTRUCTOR, Annotation.PROPERTY, Annotation.METHOD)
+         *
+         * @type {Array}
+         */
+        targets: [Annotation.CONSTRUCTOR],
 
-    /**
-     * An attribute for the annotation
-     * 
-     * @var {String}
-     */
-    MyConstructorAnnotation.prototype.sample = null;
+        /**
+         * The main value
+         *
+         * @type {String}
+         */
+        value: 'default value',
 
-    module.exports = MyConstructorAnnotation;
+        /**
+         * An additional attribute
+         *
+         * @type {String}
+         */
+        sample: 'default value for sample',
+        
+    });
+
 
 ### Add the Annotation to a File
 
     // my-sample.js
+    // ------------
 
     /**
      * @MyConstructorAnnotation("some value", sample="here is an attribute value")
@@ -89,12 +90,10 @@ Example:
 ### Parse the Annotation
 
     // my-parser.js
+    // ------------
 
     var path = require('path');
     var annotations = require('conga-annotations');
-
-    // load the annotation to compare against
-    var MyConstructorAnnotation = require('./my-constructor-annotation');
 
     // create the registry
     var registry = new annotations.Registry();
@@ -117,7 +116,7 @@ Example:
     constructorAnnotations.forEach(function(annotation){
 
         // @MyConstructorAnnotation
-        if (annotation instanceof MyConstructorAnnotation){
+        if (annotation.annotation === 'MyConstructorAnnotation'){
 
             // do something with the annotation data
             console.log(annotation.target); // -> "MySample"

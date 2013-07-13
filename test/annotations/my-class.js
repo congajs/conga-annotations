@@ -1,11 +1,9 @@
-var Annotation = require('../../lib/annotation');
+var Annotation = require('../../lib/Annotation');
 
-var MyClass = function(data){
-  this.name = data.name;
-};
+module.exports = Annotation.extend({
 
-MyClass.annotation = 'MyClass';
-MyClass.targets = [Annotation.CONSTRUCTOR];
-MyClass.prototype.name = null;
+	annotation: 'MyClass',
 
-module.exports = MyClass;
+	targets: [Annotation.CONSTRUCTOR]
+	
+});

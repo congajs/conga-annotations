@@ -1,15 +1,12 @@
-var Annotation = require('../../lib/annotation');
+var Annotation = require('../../lib/Annotation');
 
-var MyProperty = function(data){
-  this.value = data['__value'];
-  this.something = data['something'];
-  this.foos = data['foos'];
-};
+module.exports = Annotation.extend({
 
-MyProperty.annotation = 'MyProperty';
-MyProperty.targets = [Annotation.PROPERTY];
-MyProperty.prototype.value = null;
-MyProperty.prototype.something = null;
-MyProperty.prototype.foos = null;
+	annotation: 'MyProperty',
 
-module.exports = MyProperty;
+	targets: [Annotation.PROPERTY],
+
+	something: null,
+	foos: null
+	
+});

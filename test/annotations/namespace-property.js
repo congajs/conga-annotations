@@ -1,12 +1,9 @@
-var Annotation = require('../../lib/annotation');
+var Annotation = require('../../lib/Annotation');
 
-var NamespaceProperty = function(data){
-  this.value = data['__value'];
+module.exports = Annotation.extend({
 
-};
+	annotation: 'Namespace:Property',
 
-NamespaceProperty.annotation = 'Namespace:Property';
-NamespaceProperty.targets = [Annotation.PROPERTY];
-NamespaceProperty.prototype.value = null;
-
-module.exports = NamespaceProperty;
+	targets: [Annotation.PROPERTY]
+	
+});
