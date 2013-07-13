@@ -77,7 +77,7 @@ Example:
         /**
          * Optional initialization method that
          * can be used to transform data
-
+         *
          * @param  {Object} data
          * @return {void}
          */
