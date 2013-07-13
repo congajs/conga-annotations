@@ -1,4 +1,4 @@
-var Annotation = require('../../lib/Annotation');
+var Annotation = require('../../lib/annotation');
 
 module.exports = Annotation.extend({
 
