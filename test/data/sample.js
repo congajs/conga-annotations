@@ -5,7 +5,7 @@
 var Sample = {
   
     /**
-     * @MyProperty("the-value", something="hello", foos=["one","two","three"])
+     * @MyProperty("my value", something="hello", foos=["one","two","three"])
      * @var {String}
      */
     myProperty: "hello",
@@ -32,7 +32,7 @@ var Sample = {
      *      "a":"multi",
      *      "line":"hash"
      *      
-     *  }
+     *  },
      *  anArray=[
      *  "this", 
      *  "is", 
@@ -49,6 +49,7 @@ var Sample = {
 
     /**
      * @MyMethod
+     * @MyMethod("second annotation")
      */
     methodWithoutParenthesis: function(){
 
