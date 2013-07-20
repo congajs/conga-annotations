@@ -152,6 +152,6 @@ Example:
     @MyAnnotation(foo={hi:"there"})
 
     // nested annotations
-    @MyAnnotation(foo={@MyNestedAnnotation("this is nested", foo=true) })
+    @MyAnnotation(foo={@MyNestedAnnotation("this is nested", foo=true)})
 
 
