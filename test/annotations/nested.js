@@ -2,16 +2,12 @@ var Annotation = require('../../lib/annotation');
 
 module.exports = Annotation.extend({
 
-	annotation: 'MyMethod',
+	annotation: 'Nested',
 
 	targets: [Annotation.METHOD],
 
-	singleHash: {},
-
-	someHash: {},
-
+	aString: null,
 	anArray: [],
-	
-	foo: null,
-	bar: null
+	anObject: {}
+
 });

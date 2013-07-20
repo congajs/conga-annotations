@@ -7,7 +7,7 @@ describe('AttributeParser:', function() {
 				  "   aNumericArray=[1,2,3,4], anObject={foo:\"bar\"}, aStringArray=[\"one\",\"two\"]";
 
 	var parser = new AttributeParser();
-	var attributes = parser.parse(comment);
+	var attributes = parser.parse(null, null, comment);
 
 	it('returns a correct __value', function(){
 		attributes.value.should.eql('this is a value');

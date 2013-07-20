@@ -34,12 +34,12 @@ var Sample = {
      *      
      *  },
      *  anArray=[
-     *  "this", 
-     *  "is", 
-     *  "in", 
-     *  "a***", 
-     *  "multi-", 
-     *  "line"
+     *      "this", 
+     *      "is", 
+     *      "in", 
+     *      "a***", 
+     *      "multi-", 
+     *      "line"
      *  ]
      * )
      */
@@ -52,6 +52,16 @@ var Sample = {
      * @MyMethod("second annotation")
      */
     methodWithoutParenthesis: function(){
+
+    },
+
+    /**
+     * @MyMethod(
+     *     foo={@Nested("nested value 1", anArray=[1,2,3])},
+     *     bar={@Nested("nested value 2", anObject={foo:"bar"}, aString="this is a string")}
+     * )
+     */
+    methodWithNestedAnnotations: function(){
 
     }
     

@@ -23,7 +23,8 @@ describe('Reader:', function() {
 	registry.registerAnnotation(__dirname + '/annotations/my-method.js');
 	registry.registerAnnotation(__dirname + '/annotations/my-property.js');
 	registry.registerAnnotation(__dirname + '/annotations/namespace-property.js');
-	
+	registry.registerAnnotation(__dirname + '/annotations/nested.js');
+
 	// parse the sample file
 	reader.parse(samplePath);
 	
@@ -97,6 +98,17 @@ describe('Reader:', function() {
 
 		it('has correct target following non-parenthesis', function() {
 			methodAnnotations[3].value.should.eql('second annotation');
+		});
+
+		it('has correct nested annotations', function() {
+
+			methodAnnotations[4].foo.annotation.should.eql('Nested');
+			methodAnnotations[4].bar.annotation.should.eql('Nested');
+
+			methodAnnotations[4].foo.value.should.eql('nested value 1');
+			methodAnnotations[4].bar.value.should.eql('nested value 2');
+
+			methodAnnotations[4].bar.anObject.should.eql({ foo : "bar" });			
 		});
 	});
 

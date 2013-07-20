@@ -137,5 +137,21 @@ Example:
 
     });
 
+## Supported Attribute Types
+
+    // string
+    @MyAnnotation(foo="a string")
+
+    // boolean
+    @MyAnnotation(foo=true)
+
+    // array
+    @MyAnnotation(foo=[1,2,3,4])
+
+    // object
+    @MyAnnotation(foo={hi:"there"})
+
+    // nested annotations
+    @MyAnnotation(foo={@MyNestedAnnotation("this is nested", foo=true) })
 
 

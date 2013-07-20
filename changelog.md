@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.1.2
+-----
+
+July 19, 2013
+
+  * Added ability to have nested annotations.
+
 0.1.1
 -----
 
