@@ -98,18 +98,40 @@ describe('Reader:', function() {
 
 		it('has correct target following non-parenthesis', function() {
 			methodAnnotations[3].value.should.eql('second annotation');
+			methodAnnotations[4].someHash.should.eql({ foo : 123 });
 		});
 
 		it('has correct nested annotations', function() {
 
-			methodAnnotations[4].foo.annotation.should.eql('Nested');
-			methodAnnotations[4].bar.annotation.should.eql('Nested');
+			methodAnnotations[5].foo.annotation.should.eql('Nested');
+			methodAnnotations[5].bar.annotation.should.eql('Nested');
 
-			methodAnnotations[4].foo.value.should.eql('nested value 1');
-			methodAnnotations[4].bar.value.should.eql('nested value 2');
+			methodAnnotations[5].foo.value.should.eql('nested value 1');
+			methodAnnotations[5].bar.value.should.eql('nested value 2');
 
-			methodAnnotations[4].bar.anObject.should.eql({ foo : "bar" });			
+			methodAnnotations[5].bar.anObject.should.eql({ foo : "bar" });			
 		});
+
+		it('has correct array of nested annotations for values', function() {
+
+			methodAnnotations[6].foo.length.should.eql(2);
+			methodAnnotations[6].foo[0].annotation.should.eql('Nested');
+			methodAnnotations[6].foo[1].annotation.should.eql('Nested');
+
+			methodAnnotations[6].foo[0].value.should.eql('nested 1');
+			methodAnnotations[6].foo[1].value.should.eql('nested 2');
+
+		});
+
+		it('has correct array of nested annotations for value', function() {
+
+			methodAnnotations[7].value.length.should.eql(2);
+			methodAnnotations[7].value.length.should.eql(2);
+
+			methodAnnotations[7].value[0].value.should.eql('nested 1');
+			methodAnnotations[7].value[1].value.should.eql('nested 2');
+		});
+
 	});
 
 	// property annotations

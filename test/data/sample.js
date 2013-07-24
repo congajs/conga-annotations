@@ -50,6 +50,7 @@ var Sample = {
     /**
      * @MyMethod
      * @MyMethod("second annotation")
+     * @MyMethod(someHash={foo:123})
      */
     methodWithoutParenthesis: function(){
 
@@ -57,11 +58,27 @@ var Sample = {
 
     /**
      * @MyMethod(
-     *     foo={@Nested("nested value 1", anArray=[1,2,3])},
-     *     bar={@Nested("nested value 2", anObject={foo:"bar"}, aString="this is a string")}
+     *     "my value",
+     *     singleHash={foo:"bar"},
+     *     foo=@Nested("nested value 1", anArray=[1,2,3]),
+     *     bar=@Nested("nested value 2", anObject={foo:"bar"}, aString="this is a string")
      * )
      */
     methodWithNestedAnnotations: function(){
+
+    },
+
+    /**
+     * @MyMethod(foo=[@Nested("nested 1"), @Nested("nested 2")])
+     */
+    methodWithNestedAnnotations2: function(){
+
+    },
+
+    /**
+     * @MyMethod([@Nested("nested 1"), @Nested("nested 2")])
+     */
+    methodWithNestedAnnotationsAsValue: function(){
 
     }
     

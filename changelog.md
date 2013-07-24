@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.1.3
+-----
+
+July 24, 2013
+
+  * Re-worked attribute parsing so that arrays of nested annotations are handled correctly.
+
 0.1.2
 -----
 
