@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.1.4
+-----
+
+December 28, 2013
+
+  * Added check to make sure constructor annotation exists in reader.js
+
 0.1.3
 -----
 
