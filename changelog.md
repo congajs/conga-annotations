@@ -1,6 +1,13 @@
 Changelog
 =========
 
+0.1.5
+-----
+
+January 24, 2014
+
+  * Added null check for nextLine in parser to overcome weird issue from new lines from vim
+
 0.1.4
 -----
 
