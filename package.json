@@ -17,7 +17,13 @@
     "annotation",
     "annotations"
   ],
-  "author": "lampjunkie",
+  "author": "Marc Roulias",
+  "contributors": [
+		{
+			"name": "Anthony Matarazzo" ,
+			"email": "email@anthonymatarazzo.com"
+		}
+  ],
   "license": "MIT",
   "dependencies": {
     "StringScanner": "0.0.3"
