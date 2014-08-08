@@ -7,7 +7,7 @@
   },
   "main": "./index.js",
   "scripts": {
-    "test": "mocha test/*.js"
+    "test": "mocha --reporter spec test/"
   },
   "repository": {
     "type": "git",
