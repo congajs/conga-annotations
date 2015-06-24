@@ -157,3 +157,5 @@ Example:
     // array of nested annotations
     @MyAnnotation(foo=[@MyNestedAnnotation("nested 1"), @MyNestedAnnotation("nested 2")])
 
+## Working Example
+http://code.runnable.com/VMlxhH4h9tNkarWi/conga-annotations-hello-world-example-for-node-js-and-congajs
