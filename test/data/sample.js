@@ -83,9 +83,16 @@ var Sample = {
     },
 
     /**
-     * @MyMethod("hello world")
+     * @MyMethod("function has space")
      */
     methodWithDifferentStyle: function () {
+
+    },
+
+    /**
+     * @MyMethod("function has many spaces")
+     */
+    methodWithDifferentStyle:             function () {
 
     }
     

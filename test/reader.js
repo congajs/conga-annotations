@@ -132,8 +132,12 @@ describe('Reader:', function() {
 			methodAnnotations[7].value[1].value.should.eql('nested 2');
 		});
 
-		it('can read methods with extra spaces between `function` and `()`', function() {
-			methodAnnotations[0].value.should.eql('hello world');
+		it('can read methods with extra space between `function` and `()`', function() {
+			(typeof methodAnnotations[8] !== "undefined").should.eql(true);
+		});
+
+		it('can read methods with several extra spaces between `function` and `()`', function() {
+			(typeof methodAnnotations[9] !== "undefined").should.eql(true);
 		});
 
 	});
