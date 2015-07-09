@@ -80,6 +80,13 @@ var Sample = {
      */
     methodWithNestedAnnotationsAsValue: function(){
 
+    },
+
+    /**
+     * @MyMethod("hello world")
+     */
+    methodWithDifferentStyle: function () {
+
     }
     
 };

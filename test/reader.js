@@ -132,6 +132,10 @@ describe('Reader:', function() {
 			methodAnnotations[7].value[1].value.should.eql('nested 2');
 		});
 
+		it('can read methods with extra spaces between `function` and `()`', function() {
+			methodAnnotations[0].value.should.eql('hello world');
+		});
+
 	});
 
 	// property annotations
