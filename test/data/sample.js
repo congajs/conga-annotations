@@ -92,7 +92,7 @@ var Sample = {
     /**
      * @MyMethod("function has many spaces")
      */
-    methodWithDifferentStyle:             function () {
+    methodWithDifferentStyle: function        () {
 
     }
     
