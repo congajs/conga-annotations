@@ -42,4 +42,12 @@ describe('Reader with only methods:', function() {
     it('second method value should be 2', function() {
         methodAnnotations[1].value.should.eql("2");
     });
+
+    it('ES6 method should exist', function() {
+        (typeof methodAnnotations[2] !== "undefined").should.eql(true);
+    });
+
+    it('ES6 method value should be 3', function() {
+        methodAnnotations[2].value.should.eql("3");
+    });
 });

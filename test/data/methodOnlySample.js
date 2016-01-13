@@ -11,6 +11,13 @@ var MethodOnlySample = {
      */
     dupeMethod: function () {
 
+    },
+
+    /**
+     * @MyMethod("3")
+     */
+    es6Method: () => {
+
     }
 };
 
