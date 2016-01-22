@@ -1,4 +1,4 @@
-# conga-annotations [![Build Status](https://secure.travis-ci.org/congajs/conga-annotations.png)](http://travis-ci.org/congajs/conga-annotations)
+# ecmas-annotations [![Build Status](https://secure.travis-ci.org/jaumard/ecmas-annotations.png)](http://travis-ci.org/jaumard/ecmas-annotations)
 
 ## Overview
 
@@ -31,7 +31,7 @@ Example:
 
 ## Installation
 
-    > npm install conga-annotations
+    > npm install ecmas-annotations
 
 ## Usage
 
@@ -157,5 +157,3 @@ Example:
     // array of nested annotations
     @MyAnnotation(foo=[@MyNestedAnnotation("nested 1"), @MyNestedAnnotation("nested 2")])
 
-## Working Example
-http://code.runnable.com/VMlxhH4h9tNkarWi/conga-annotations-hello-world-example-for-node-js-and-congajs
