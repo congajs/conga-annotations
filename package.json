@@ -1,6 +1,6 @@
 {
-  "name": "conga-annotations",
-  "version": "0.1.8",
+  "name": "ecmas-annotations",
+  "version": "0.2.0",
   "description": "annotation parser library",
   "directories": {
     "test": "test"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/congajs/conga-annotations.git"
+    "url": "git://github.com/jaumard/ecmas-annotations.git"
   },
   "keywords": [
     "annotation",
@@ -19,18 +19,24 @@
   ],
   "author": "Marc Roulias",
   "contributors": [
-		{
-			"name": "Anthony Matarazzo" ,
-			"email": "email@anthonymatarazzo.com"
-		}
+    {
+      "name": "Jimmy Aumard",
+      "email": "jimmy.aumard@gmail.com"
+    },
+    {
+      "name": "Anthony Matarazzo",
+      "email": "email@anthonymatarazzo.com"
+    }
   ],
   "license": "MIT",
   "dependencies": {
     "StringScanner": "0.0.3"
   },
   "devDependencies": {
-     "mocha": "1.9.0",
-     "should": "1.2.2"
+    "mocha": "2.3.4",
+    "should": "8.1.1"
   },
-  "readmeFilename": "README.md"
+  "engines": {
+    "node": ">= 4.0.0"
+  }
 }
