@@ -1,15 +1,15 @@
 /**
- * @MyClass(name="this-is-a-name", namespace="my.namespace")
+ * @MyConstructor(name="this-is-a-name", namespace="my.namespace")
  * @author marc
  */
 var Sample = {
-  
+
     /**
      * @MyProperty("my value", something="hello", foos=["one","two","three"])
      * @var {String}
      */
     myProperty: "hello",
-    
+
     /**
      * @Namespace:Property("test")
      * @type {String}
@@ -21,9 +21,9 @@ var Sample = {
      * @MyOtherMethod("something")
      */
     myMethod: function(){
-      
+
     },
-    
+
     /**
      * @MyMethod("multi-line value",
      *  singleHash={"foo":true},
@@ -31,20 +31,20 @@ var Sample = {
      *      "here":"is",
      *      "a":"multi",
      *      "line":"hash"
-     *      
+     *
      *  },
      *  anArray=[
-     *      "this", 
-     *      "is", 
-     *      "in", 
-     *      "a***", 
-     *      "multi-", 
+     *      "this",
+     *      "is",
+     *      "in",
+     *      "a***",
+     *      "multi-",
      *      "line"
      *  ]
      * )
      */
     anotherMethod: function(){
-      
+
     },
 
     /**
@@ -81,7 +81,7 @@ var Sample = {
     methodWithNestedAnnotationsAsValue: function(){
 
     }
-    
+
 };
 
 module.exports = Sample;

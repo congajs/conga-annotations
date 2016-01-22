@@ -2,7 +2,7 @@ var should = require('should');
 var AttributeParser = require('../lib/attribute-parser');
 var Registry = require('../lib/registry');
 var Reader = require('../lib/reader');
-var MyClass = require('./annotations/my-class');
+var MyClass = require('./annotations/my-constructor');
 var MyMethod = require('./annotations/my-method');
 var MyProperty = require('./annotations/my-property');
 var NamespaceProperty = require('./annotations/namespace-property');
@@ -12,14 +12,14 @@ var reader = new Reader(registry);
 
 
 describe('Reader:', function() {
-	
+
 	// build the Registry and Reader
 	var registry = new Registry();
 	var reader = new Reader(registry);
 	var samplePath = __dirname + '/data/sample.js';
-	
+
 	// register all of our test annotations
-	registry.registerAnnotation(__dirname + '/annotations/my-class.js');
+	registry.registerAnnotation(__dirname + '/annotations/my-constructor.js');
 	registry.registerAnnotation(__dirname + '/annotations/my-method.js');
 	registry.registerAnnotation(__dirname + '/annotations/my-property.js');
 	registry.registerAnnotation(__dirname + '/annotations/namespace-property.js');
@@ -27,7 +27,7 @@ describe('Reader:', function() {
 
 	// parse the sample file
 	reader.parse(samplePath);
-	
+
 	// constructor annotations
 	describe('getConstructor()', function() {
 
@@ -38,22 +38,22 @@ describe('Reader:', function() {
 		});
 
 		it('has a correct annotation name', function() {
-			constructorAnnotations[0].annotation.should.eql('MyClass');
+			constructorAnnotations[0].annotation.should.eql('MyConstructor');
 		});
 
 		it('has a correct target', function() {
 			constructorAnnotations[0].target.should.eql('Sample');
 		});
-		
+
 		it('has correct values', function() {
 			constructorAnnotations[0].name.should.eql('this-is-a-name');
 		});
-		
+
 	});
-	
+
 	// method annotations
 	describe('getMethodAnnotations()', function() {
-		
+
 		var methodAnnotations = reader.getMethodAnnotations();
 
 		it('returns a valid annotation', function(){
@@ -63,7 +63,7 @@ describe('Reader:', function() {
 		it('has a correct annotation name', function() {
 			methodAnnotations[0].annotation.should.eql('MyMethod');
 		});
-		
+
 		it('has a correct target', function() {
 			methodAnnotations[0].target.should.eql('myMethod');
 		});
@@ -71,7 +71,7 @@ describe('Reader:', function() {
 		it('has correct value', function() {
 			methodAnnotations[0].value.should.eql('the-value');
 		});
-		
+
 		it('has correct single hash value', function() {
 			methodAnnotations[0].singleHash.should.eql({ "foo" : true });
 		});
@@ -109,7 +109,7 @@ describe('Reader:', function() {
 			methodAnnotations[5].foo.value.should.eql('nested value 1');
 			methodAnnotations[5].bar.value.should.eql('nested value 2');
 
-			methodAnnotations[5].bar.anObject.should.eql({ foo : "bar" });			
+			methodAnnotations[5].bar.anObject.should.eql({ foo : "bar" });
 		});
 
 		it('has correct array of nested annotations for values', function() {
@@ -160,5 +160,5 @@ describe('Reader:', function() {
 		});
 
 	});
-	
+
 });

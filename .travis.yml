@@ -1,5 +1,16 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.8"
-  - "0.6"
+- '4'
+- stable
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: jimmy.aumard@gmail.com
+  api_key:
+    secure: OBSW1wqqROJwSbxbtPicXbDbTytLAg5JL4lpJuX9QvavklWhfIiY+UYATDV+ApSTkEesUgfZf/7VpfQHcr7byV7icl2K7jIp2EBTwj+QPYsYch3T/hVptNXht6IK2n8/WNBr2y6GDtW5N/byunabYfL+9uXIY1vKHxBMP6rxomWHzq9YTeSqlcoMxBxav4kGG3BaUnlrGKkJsQKOao9ZeL0TqLAzoL4ff5aFzesmhF03XmYm6kile/y8izbBTGTfvyITSR4akSFEGEP/B6+kRrKvYOHJfUBsFy22W5b1n82B+lKUbDCqlYiwl3HMVN3YZP/gWdFl1r0QWz6v6FMIS51ngs+c3o/0FROIHzWy0WSB98F9iYEml1TJ4fExbrrRHYv4QG80FlCNHbZ3hL7CrVt2GAjhMbaP8J2QatVHsF4RkEpFTdZhZB61MCp8HlZRrKUPAeJZpokEx2KDQUIFTo5k6Eh57ub0YUAadzKM+M1H+0SzuyTuN+lwGt8csggh4AHpQ3EEqjPhruZlu4Vij0i28BhoKQpeopu9NISg9FL8Dayefsp4P52BFhK/gT1URVokmD0U1mAaTQy4GJNurKX7t3dN9/ABFZuzR9xH6O4UMtORQSv0umCO4R2GsxTcUXR++Z/5SzyRNGoJTziNCZ4UckoPM3tFVw5GaeFmVR0=
+  on:
+    tags: true
+    repo: jaumard/conga-annotations
+    all_branches: true
+    node: stable

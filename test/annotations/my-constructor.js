@@ -2,8 +2,8 @@ var Annotation = require('../../lib/annotation');
 
 module.exports = Annotation.extend({
 
-	annotation: 'MyClass',
+	annotation: 'MyConstructor',
 
-	targets: [Annotation.DEFINITION]
+	targets: [Annotation.CONSTRUCTOR]
 
 });
