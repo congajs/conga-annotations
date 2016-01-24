@@ -1,31 +1,33 @@
-var should = require('should');
-var AttributeParser = require('../lib/attribute-parser');
+'use strict'
 
-describe('AttributeParser:', function() {
+const assert = require('assert')
+const AttributeParser = require('../lib/attribute-parser')
 
-	var comment = "*\n *    \"this is a value\",\n * aString=\"foo bar\",\n * " +
-				  "   aNumericArray=[1,2,3,4], anObject={foo:\"bar\"}, aStringArray=[\"one\",\"two\"]";
+describe('AttributeParser:', function () {
 
-	var parser = new AttributeParser();
-	var attributes = parser.parse(null, null, comment);
+  const comment = '*\n *    "this is a value",\n * aString="foo bar",\n * ' +
+    '   aNumericArray=[1,2,3,4], anObject={foo:"bar"}, aStringArray=["one","two"]'
 
-	it('returns a correct __value', function(){
-		attributes.value.should.eql('this is a value');
-	});
+  const parser = new AttributeParser()
+  const attributes = parser.parse(null, null, comment)
 
-	it('returns a correct string value', function(){
-		attributes.aString.should.eql('foo bar');
-	});
+  it('returns a correct __value', function () {
+    assert.equal(attributes.value, 'this is a value')
+  })
 
-	it('returns a correct numeric array', function(){
-		attributes.aNumericArray.should.eql([1,2,3,4]);
-	});
+  it('returns a correct string value', function () {
+    assert.equal(attributes.aString, 'foo bar')
+  })
 
-	it('returns a correct object', function(){
-		attributes.anObject.should.eql({ foo : 'bar' });
-	});
+  it('returns a correct numeric array', function () {
+    assert.deepEqual(attributes.aNumericArray, [1, 2, 3, 4])
+  })
 
-	it('returns a correct string array', function(){
-		attributes.aStringArray.should.eql(['one', 'two']);
-	});
-});
+  it('returns a correct object', function () {
+    assert.deepEqual(attributes.anObject, {foo: 'bar'})
+  })
+
+  it('returns a correct string array', function () {
+    assert.deepEqual(attributes.aStringArray, ['one', 'two'])
+  })
+})

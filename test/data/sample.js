@@ -1,20 +1,22 @@
+'use strict'
+
 /**
  * @MyConstructor(name="this-is-a-name", namespace="my.namespace")
  * @author marc
  */
-var Sample = {
+const Sample = {
 
     /**
      * @MyProperty("my value", something="hello", foos=["one","two","three"])
      * @var {String}
      */
-    myProperty: "hello",
+    myProperty: 'hello',
 
     /**
      * @Namespace:Property("test")
      * @type {String}
      */
-    namespaceProperty: "namespaced annotation",
+    namespaceProperty: 'namespaced annotation',
 
     /**
      * @MyMethod("the-value", singleHash={"foo":true}, someHash={foo:"bar", another:"one"}, anArray=["one", "two", "three"])
@@ -82,6 +84,6 @@ var Sample = {
 
     }
 
-};
+}
 
-module.exports = Sample;
+module.exports = Sample

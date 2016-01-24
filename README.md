@@ -30,26 +30,22 @@ Example:
 
 
 ## Installation
+Need Node >= 4.0.0
 
     > npm install ecmas-annotations
 
 ## Usage
 
+Full example in [xample folder](https://github.com/jaumard/ecmas-annotations/tree/master/example) (`node main.js` to test is). 
+
 ### Create an Annotation
 
     // my-constructor-annotation.js
     // ----------------------------
+    'use strict'
+    const Annotation = require('esmac-annotations').Annotation;
 
-    var Annotation = require('conga-annotations').Annotation;
-
-    module.exports = Annotation.extend({
-
-        /**
-         * The name of the annotation
-
-         * @type {String}
-         */
-        annotation: 'MyConstructorAnnotation',
+    module.exports = class MyConstructorAnnotation extends Annotation {
 
         /**
          * The possible targets
@@ -58,21 +54,29 @@ Example:
          *
          * @type {Array}
          */
-        targets: [Annotation.CONSTRUCTOR],
+        static get targets() { return [Annotation.CONSTRUCTOR] }
 
         /**
-         * The main value
-         *
-         * @type {String}
+         * Constructor to add attributes
+         * @type {Array}
          */
-        value: 'default value',
-
-        /**
-         * An additional attribute
-         *
-         * @type {String}
-         */
-        sample: 'default value for sample',
+        constructor(data, filePath){
+          super(data, filePath)
+          /**
+           * The main value
+           *
+           * @type {String}
+           */
+          value = 'default value'
+  
+          /**
+           * An additional attribute
+           *
+           * @type {String}
+           */
+          sample = 'default value for sample'
+        
+        }
         
         /**
          * Optional initialization method that
@@ -103,25 +107,26 @@ Example:
     // my-parser.js
     // ------------
 
-    var path = require('path');
-    var annotations = require('conga-annotations');
+    const path = require('path')
+    const annotations = require('ecmas-annotations')
 
     // create the registry
-    var registry = new annotations.Registry();
+    const registry = new annotations.Registry()
 
     // add annotations to the registry
-    registry.registerAnnotation(path.join(__dirname, 'my-constructor-annotation'));
+    registry.registerAnnotation(path.join(__dirname, 'my-constructor-annotation'))
 
     // create the annotation reader
-    var reader = new annotations.Reader(registry);
+    const reader = new annotations.Reader(registry)
 
-    // parse the annotations from a file
-    reader.parse(path.join(__dirname, 'my-sample.js'));
+    // parse the annotations from a file, default parse ES6 file, Reader.ES5 to force ES5
+    reader.parse(path.join(__dirname, 'my-sample.js'), Reader.ES6)
 
     // get the annotations
-    var constructorAnnotations = reader.getConstructorAnnotations();
-    var methodAnnotations = reader.getMethodAnnotations();
-    var propertyAnnotations = reader.getPropertyAnnotations();
+    const definitionAnnotations = reader.definitionAnnotations
+    const constructorAnnotations = reader.constructorAnnotations
+    const methodAnnotations = reader.methodAnnotations
+    const propertyAnnotations = reader.propertyAnnotations
 
     // loop through and handle the annotations
     constructorAnnotations.forEach(function(annotation){
