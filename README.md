@@ -179,5 +179,5 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
 [codeclimate-image]: https://img.shields.io/codeclimate/github/jaumard/ecmas-annotations.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/jaumard/ecmas-annotations
 [gitter-image]: http://img.shields.io/badge/+%20GITTER-JOIN%20CHAT%20%E2%86%92-1DCE73.svg?style=flat-square
-[gitter-url]: https://gitter.im/trailsjs/trails
+[gitter-url]: https://gitter.im/jaumard/ecmas-annotations
 
