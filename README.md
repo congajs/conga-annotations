@@ -41,7 +41,7 @@ Need Node >= 4.0.0
 
 ## Usage
 
-Full example in [xample folder](https://github.com/jaumard/ecmas-annotations/tree/master/example) (`node main.js` to test is). 
+Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tree/master/example) (`node main.js` to test is). 
 
 ### Create an Annotation
 
@@ -55,7 +55,7 @@ Full example in [xample folder](https://github.com/jaumard/ecmas-annotations/tre
         /**
          * The possible targets
          *
-         * (Annotation.CONSTRUCTOR, Annotation.PROPERTY, Annotation.METHOD)
+         * (Annotation.DEFINITION, Annotation.CONSTRUCTOR, Annotation.PROPERTY, Annotation.METHOD)
          *
          * @type {Array}
          */
