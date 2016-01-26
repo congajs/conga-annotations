@@ -1,4 +1,9 @@
-# ecmas-annotations [![Build Status](https://secure.travis-ci.org/jaumard/ecmas-annotations.png)](http://travis-ci.org/jaumard/ecmas-annotations)
+# ecmas-annotations 
+[![Gitter][gitter-image]][gitter-url]
+[![NPM version][npm-image]][npm-url]
+[![Build status][ci-image]][ci-url]
+[![Dependency Status][daviddm-image]][daviddm-url]
+[![Code Climate][codeclimate-image]][codeclimate-url]
 
 ## Overview
 
@@ -161,4 +166,18 @@ Full example in [xample folder](https://github.com/jaumard/ecmas-annotations/tre
 
     // array of nested annotations
     @MyAnnotation(foo=[@MyNestedAnnotation("nested 1"), @MyNestedAnnotation("nested 2")])
+
+## License
+[MIT](https://github.com/jaumard/ecmas-annotations/blob/master/LICENSE)
+
+[npm-image]: https://img.shields.io/npm/v/ecmas-annotations.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/ecmas-annotations
+[ci-image]: https://travis-ci.org/jaumard/ecmas-annotations.svg?branch=master
+[ci-url]: https://travis-ci.org/jaumard/ecmas-annotations
+[daviddm-image]: http://img.shields.io/david/jaumard/ecmas-annotations.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/jaumard/ecmas-annotations
+[codeclimate-image]: https://img.shields.io/codeclimate/github/jaumard/ecmas-annotations.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/jaumard/ecmas-annotations
+[gitter-image]: http://img.shields.io/badge/+%20GITTER-JOIN%20CHAT%20%E2%86%92-1DCE73.svg?style=flat-square
+[gitter-url]: https://gitter.im/trailsjs/trails
 
