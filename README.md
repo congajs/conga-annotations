@@ -1,6 +1,7 @@
 # ecmas-annotations 
 [![Gitter][gitter-image]][gitter-url]
 [![NPM version][npm-image]][npm-url]
+[![NPM downloads][npm-download]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
 [![Code Climate][codeclimate-image]][codeclimate-url]
@@ -172,6 +173,7 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
 
 [npm-image]: https://img.shields.io/npm/v/ecmas-annotations.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/ecmas-annotations
+[npm-download]: https://img.shields.io/npm/dt/ecmas-annotations.svg
 [ci-image]: https://travis-ci.org/jaumard/ecmas-annotations.svg?branch=master
 [ci-url]: https://travis-ci.org/jaumard/ecmas-annotations
 [daviddm-image]: http://img.shields.io/david/jaumard/ecmas-annotations.svg?style=flat-square
