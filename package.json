@@ -1,6 +1,6 @@
 {
   "name": "ecmas-annotations",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Annotation parser library for ES2014/ES2015, ES5/ES6",
   "directories": {
     "test": "test"
