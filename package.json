@@ -32,7 +32,7 @@
     "StringScanner": "0.0.3"
   },
   "devDependencies": {
-    "eslint": "^2.0.0-beta.1",
+    "eslint": "^2.5.0",
     "eslint-config-trails": "^1.0.1",
     "mocha": "2.4.5"
   },
