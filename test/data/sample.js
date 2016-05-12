@@ -10,21 +10,21 @@ const Sample = {
      * @MyProperty("my value", something="hello", foos=["one","two","three"])
      * @var {String}
      */
-    myProperty: 'hello',
+  myProperty: 'hello',
 
     /**
      * @Namespace:Property("test")
      * @type {String}
      */
-    namespaceProperty: 'namespaced annotation',
+  namespaceProperty: 'namespaced annotation',
 
     /**
      * @MyMethod("the-value", singleHash={"foo":true}, someHash={foo:"bar", another:"one"}, anArray=["one", "two", "three"])
      * @MyOtherMethod("something")
      */
-    myMethod: function(){
+  myMethod: function(){
 
-    },
+  },
 
     /**
      * @MyMethod("multi-line value",
@@ -45,18 +45,18 @@ const Sample = {
      *  ]
      * )
      */
-    anotherMethod: function(){
+  anotherMethod: function(){
 
-    },
+  },
 
     /**
      * @MyMethod
      * @MyMethod("second annotation")
      * @MyMethod(someHash={foo:123})
      */
-    methodWithoutParenthesis: function(){
+  methodWithoutParenthesis: function(){
 
-    },
+  },
 
     /**
      * @MyMethod(
@@ -66,23 +66,23 @@ const Sample = {
      *     bar=@Nested("nested value 2", anObject={foo:"bar"}, aString="this is a string")
      * )
      */
-    methodWithNestedAnnotations: function(){
+  methodWithNestedAnnotations: function(){
 
-    },
+  },
 
     /**
      * @MyMethod(foo=[@Nested("nested 1"), @Nested("nested 2")])
      */
-    methodWithNestedAnnotations2: function(){
+  methodWithNestedAnnotations2: function(){
 
-    },
+  },
 
     /**
      * @MyMethod([@Nested("nested 1"), @Nested("nested 2")])
      */
-    methodWithNestedAnnotationsAsValue: function(){
+  methodWithNestedAnnotationsAsValue: function(){
 
-    }
+  }
 
 }
 
