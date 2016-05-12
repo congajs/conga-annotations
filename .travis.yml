@@ -1,7 +1,8 @@
 language: node_js
 node_js:
-- '4'
-- stable
+- 4
+- 5
+- 6
 notifications:
   email: false
 deploy:
@@ -13,4 +14,4 @@ deploy:
     tags: true
     repo: jaumard/ecmas-annotations
     all_branches: true
-    node: stable
+    node: 6
