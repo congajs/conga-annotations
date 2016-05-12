@@ -1,13 +1,13 @@
 {
   "name": "ecmas-annotations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Annotation parser library for ES2014/ES2015, ES5/ES6",
   "directories": {
     "test": "test"
   },
   "main": "./index.js",
   "scripts": {
-    "test": "eslint --fix . && mocha --reporter spec test/"
+    "test": "eslint . && mocha --reporter spec test/"
   },
   "repository": {
     "type": "git",
