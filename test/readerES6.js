@@ -96,7 +96,7 @@ describe('ReaderES6:', function () {
     })
 
     it('has correct single hash value (multi-line)', function () {
-      assert.deepEqual( methodAnnotations[1].singleHash, {'foo': true})
+      assert.deepEqual(methodAnnotations[1].singleHash, {'foo': true})
     })
 
     it('has correct target without parenthesis', function () {

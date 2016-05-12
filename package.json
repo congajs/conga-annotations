@@ -7,7 +7,7 @@
   },
   "main": "./index.js",
   "scripts": {
-    "test": "eslint . && mocha --reporter spec test/"
+    "test": "eslint --fix . && mocha --reporter spec test/"
   },
   "repository": {
     "type": "git",
@@ -32,8 +32,8 @@
     "StringScanner": "0.0.3"
   },
   "devDependencies": {
-    "eslint": "^2.5.0",
-    "eslint-config-trails": "^1.0.1",
+    "eslint": "^2.9.0",
+    "eslint-config-trails": "^1.0.6",
     "mocha": "2.4.5"
   },
   "eslintConfig": {
