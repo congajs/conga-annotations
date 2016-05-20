@@ -10,7 +10,7 @@ module.exports = class Sample {
    * @MyConstructor(name="this-is-a-name", namespace="my.namespace")
    * @author jaumard
    */
-  constructor(){
+  constructor() {
 
     /**
      * @MyProperty("my value", something="hello", foos=["one","two","three"])
@@ -38,11 +38,11 @@ module.exports = class Sample {
    * @MyMethod("multi-line value",
    *  singleHash={"foo":true},
    *  someHash={
-     *      "here":"is",
-     *      "a":"multi",
-     *      "line":"hash"
-     *
-     *  },
+   *      "here":"is",
+   *      "a":"multi",
+   *      "line":"hash"
+   *
+   *  },
    *  anArray=[
    *      "this",
    *      "is",
@@ -89,6 +89,13 @@ module.exports = class Sample {
    * @MyMethod([@Nested("nested 1"), @Nested("nested 2")])
    */
   methodWithNestedAnnotationsAsValue() {
+
+  }
+
+  /**
+   * @MyMethod({global:test})
+   */
+  methodWithGlobalVariables() {
 
   }
 }
