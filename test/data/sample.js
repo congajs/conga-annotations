@@ -80,6 +80,20 @@ var Sample = {
      */
     methodWithNestedAnnotationsAsValue: function(){
 
+    },
+
+    /**
+     * @MyMethod("function has space")
+     */
+    methodWithDifferentStyle: function () {
+
+    },
+
+    /**
+     * @MyMethod("function has many spaces")
+     */
+    methodWithDifferentStyle: function        () {
+
     }
     
 };
