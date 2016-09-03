@@ -167,12 +167,20 @@ describe('ReaderES6:', function() {
       assert(propertyAnnotations[0] instanceof MyProperty)
     })
 
+    it('has a correct target', function() {
+      assert.equal(propertyAnnotations[0].target, 'myProperty')
+    })
+
     it('returns a valid value', function() {
       assert.equal(propertyAnnotations[0].value, 'my value')
     })
 
     it('returns a valid namespace property', function() {
       assert(propertyAnnotations[1] instanceof NamespaceProperty)
+    })
+
+    it('has a correct namespaced target', function() {
+      assert.equal(propertyAnnotations[1].target, 'namespaceProperty')
     })
 
     it('has a correct namespaced annotation name', function() {
