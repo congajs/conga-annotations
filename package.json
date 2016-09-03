@@ -1,36 +1,45 @@
 {
-  "name": "conga-annotations",
-  "version": "0.1.8",
-  "description": "annotation parser library",
+  "name": "ecmas-annotations",
+  "version": "1.0.2",
+  "description": "Annotation parser library for ES2014/ES2015, ES5/ES6",
   "directories": {
     "test": "test"
   },
   "main": "./index.js",
   "scripts": {
-    "test": "mocha --reporter spec test/"
+    "test": "eslint . && mocha --reporter spec test/"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/congajs/conga-annotations.git"
+    "url": "git://github.com/jaumard/ecmas-annotations.git"
   },
   "keywords": [
     "annotation",
-    "annotations"
+    "annotations",
+    "ecmas",
+    "es6",
+    "es2015"
   ],
-  "author": "Marc Roulias",
+  "author": "Jimmy Aumard",
   "contributors": [
-		{
-			"name": "Anthony Matarazzo" ,
-			"email": "email@anthonymatarazzo.com"
-		}
+    {
+      "name": "Jimmy Aumard",
+      "email": "jimmy.aumard@gmail.com"
+    }
   ],
   "license": "MIT",
   "dependencies": {
     "StringScanner": "0.0.3"
   },
   "devDependencies": {
-     "mocha": "1.9.0",
-     "should": "1.2.2"
+    "eslint": "^3.2.0",
+    "eslint-config-trails": "^1.0.6",
+    "mocha": "2.5.3"
   },
-  "readmeFilename": "README.md"
+  "eslintConfig": {
+    "extends": "trails"
+  },
+  "engines": {
+    "node": ">= 4.0.0"
+  }
 }

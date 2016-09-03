@@ -1,5 +1,17 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.8"
-  - "0.6"
+- 4
+- 5
+- 6
+notifications:
+  email: false
+deploy:
+  provider: npm
+  email: jimmy.aumard@gmail.com
+  api_key:
+    secure: LCQSKMZuo8o9+iT5zb/ht/dteQEeATK5JrkR6Ze7ztW3Ag/0wHxTL0bfrUtuIJ5Sz7f0UELRPQAkrQTaJnenpFWRsDdj2ZpiYZOevJPCa8Fi7FtbFZ8q2l9KkNbUH+lOHTnEFOM0hPuD51oBUb1wO60i0pitrD5j5bLAOOOIWgRsmEA10RcSzcygAgKfuPEEeMwYgDepgBM/O5Cygo1ZUtxeab+bMNYtYCUs0PW/F/DK6RyW3YkatOTFTElyRHLNmnuqDUoHJ7985i9KiqHzIKsNtHubfmTEi0dIiwWZYJ/QgXGDQKCaBEsJYf5CtUGNXFWbYqNlGPfLtor0DT4Epd+783BqPxuuwpn8yNIWWetSHhTcknFc8qakly1V7MfD8IjXXCgX+w++umvz82qB5ItIaWXntea2oomdRFG1EM4j7WnfeRmIPVSsQF62INJ18JA/xNQJYg8p6f8MQIfisZLaD+HnXVM5VoRle5lX7G3LSuIeRlmizM+8zO6WHZKaXPIEJ/QI90oODYt0Rsl2vPbSZpAASN064E5VjlMARA5WtfCCq7e7hgt02VLZG0nLByll3MXshSi8vdt0+IowC+TwhbEsF3ZrmXuuUN1dvwIz+4U1lLKNGb4lx6TnM2Ui9muX5GDYcLCXWbGa3gu3O8ms1XYmuXJHRYW27U0FfDo=
+  on:
+    tags: true
+    repo: jaumard/ecmas-annotations
+    all_branches: true
+    node: 6

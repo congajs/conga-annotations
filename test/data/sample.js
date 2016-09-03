@@ -1,29 +1,31 @@
+'use strict'
+
 /**
- * @MyClass(name="this-is-a-name", namespace="my.namespace")
+ * @MyConstructor(name="this-is-a-name", namespace="my.namespace")
  * @author marc
  */
-var Sample = {
-  
+const Sample = {
+
     /**
      * @MyProperty("my value", something="hello", foos=["one","two","three"])
      * @var {String}
      */
-    myProperty: "hello",
-    
+  myProperty: 'hello',
+
     /**
      * @Namespace:Property("test")
      * @type {String}
      */
-    namespaceProperty: "namespaced annotation",
+  namespaceProperty: 'namespaced annotation',
 
     /**
      * @MyMethod("the-value", singleHash={"foo":true}, someHash={foo:"bar", another:"one"}, anArray=["one", "two", "three"])
      * @MyOtherMethod("something")
      */
-    myMethod: function(){
-      
-    },
-    
+  myMethod: function(){
+
+  },
+
     /**
      * @MyMethod("multi-line value",
      *  singleHash={"foo":true},
@@ -31,30 +33,30 @@ var Sample = {
      *      "here":"is",
      *      "a":"multi",
      *      "line":"hash"
-     *      
+     *
      *  },
      *  anArray=[
-     *      "this", 
-     *      "is", 
-     *      "in", 
-     *      "a***", 
-     *      "multi-", 
+     *      "this",
+     *      "is",
+     *      "in",
+     *      "a***",
+     *      "multi-",
      *      "line"
      *  ]
      * )
      */
-    anotherMethod: function(){
-      
-    },
+  anotherMethod: function(){
+
+  },
 
     /**
      * @MyMethod
      * @MyMethod("second annotation")
      * @MyMethod(someHash={foo:123})
      */
-    methodWithoutParenthesis: function(){
+  methodWithoutParenthesis: function(){
 
-    },
+  },
 
     /**
      * @MyMethod(
@@ -64,38 +66,38 @@ var Sample = {
      *     bar=@Nested("nested value 2", anObject={foo:"bar"}, aString="this is a string")
      * )
      */
-    methodWithNestedAnnotations: function(){
+  methodWithNestedAnnotations: function(){
 
-    },
+  },
 
     /**
      * @MyMethod(foo=[@Nested("nested 1"), @Nested("nested 2")])
      */
-    methodWithNestedAnnotations2: function(){
+  methodWithNestedAnnotations2: function(){
 
-    },
+  },
 
     /**
      * @MyMethod([@Nested("nested 1"), @Nested("nested 2")])
      */
-    methodWithNestedAnnotationsAsValue: function(){
+  methodWithNestedAnnotationsAsValue: function(){
 
-    },
+  },
 
-    /**
-     * @MyMethod("function has space")
-     */
-    methodWithDifferentStyle: function () {
+  /**
+   * @MyMethod("function has space")
+   */
+  methodWithDifferentStyle: function () {
 
-    },
+  },
 
-    /**
-     * @MyMethod("function has many spaces")
-     */
-    methodWithDifferentStyle: function        () {
+  /**
+   * @MyMethod("function has many spaces")
+   */
+  methodWithDifferentStyle2: function        () {
 
-    }
-    
-};
+  }
 
-module.exports = Sample;
+}
+
+module.exports = Sample

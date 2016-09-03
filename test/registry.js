@@ -1,26 +1,28 @@
-var should = require('should');
-var Registry = require('../lib/registry');
+'use strict'
+
+const assert = require('assert')
+const Registry = require('../lib/registry')
 
 // test files
-var MyClass = require('./annotations/my-class');
+const MyClass = require('./annotations/my-class')
 
-describe('Registry:', function() {
-  
+describe('Registry:', function () {
+
   // create an annotation registry and register some annotations
-  var registry = new Registry();
-  registry.registerAnnotation(__dirname + '/annotations/my-class.js');
-  
-  describe('a registered annotation', function() {
+  const registry = new Registry()
+  registry.registerAnnotation(__dirname + '/annotations/my-class.js')
 
-    var annotations = registry.getAnnotations();
-    
-    it('should have an annotation property', function() {
-      annotations.should.have.property('MyClass');
-    });
+  describe('a registered annotation', function () {
 
-    it('should have a valid annotation', function() {
-      annotations.MyClass.should.eql(MyClass);
-    });
-  });
-  
-});
+    const annotations = registry.annotations
+
+    it('should have an annotation property', function () {
+      assert(annotations.MyClass)
+    })
+
+    it('should have a valid annotation', function () {
+      assert.equal(annotations.MyClass, MyClass)
+    })
+  })
+
+})
