@@ -61,18 +61,18 @@ ES5 Example:
 ## Installation
 Need Node >= 4.0.0
 
-    > npm install ecmas-annotations
+    > npm install conga-annotations
 
 ## Usage
 
-Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tree/master/example) (`node main.js` to test is). 
+Full example in [example folder](https://github.com/congajs/conga-annotations/tree/master/example) (`node main.js` to test is). 
 
 ### Create an Annotation
 
     // my-class-annotation.js
     // ----------------------------
     'use strict'
-    const Annotation = require('esmac-annotations').Annotation;
+    const Annotation = require('conga-annotations').Annotation;
 
     module.exports = class MyClassAnnotation extends Annotation {
 
@@ -128,7 +128,7 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
     // ------------
 
     const path = require('path')
-    const annotations = require('ecmas-annotations')
+    const annotations = require('conga-annotations')
 
     // create the registry
     const registry = new annotations.Registry()
