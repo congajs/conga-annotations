@@ -1,4 +1,4 @@
-# ecmas-annotations 
+# conga-annotations 
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][npm-download]][npm-url]
