@@ -1,18 +1,41 @@
 # ecmas-annotations 
-[![Gitter][gitter-image]][gitter-url]
+
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][npm-download]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Dependency Status][daviddm-image]][daviddm-url]
-[![Code Climate][codeclimate-image]][codeclimate-url]
+
 
 ## Overview
 
 This is a Node.js library which allows you to add annotations describing metdata data
-about constructors, methods, and properties within javascript files.
+about classes, constructors, methods, and properties within javascript files.
 
-Example:
+ES6 Example:
 
+    /**
+     * @MyClassAnnotation("hello world")
+     */
+    class HelloWorld {
+
+        constructor() {
+
+            /**
+             * @MyPropertyAnnotation(foo=[1,2,3,4], bar={"hello":"there"})
+             */   
+            this.myProperty = 'foo'
+        }
+
+        /**
+         * @MyMethodAnnotation("foobar", something="hello")
+         */
+        myMethod() {
+
+        }
+
+    }
+
+ES5 Example:
 
     /**
      * @MyConstructorAnnotation("some value")
@@ -46,12 +69,12 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
 
 ### Create an Annotation
 
-    // my-constructor-annotation.js
+    // my-class-annotation.js
     // ----------------------------
     'use strict'
     const Annotation = require('esmac-annotations').Annotation;
 
-    module.exports = class MyConstructorAnnotation extends Annotation {
+    module.exports = class MyClassAnnotation extends Annotation {
 
         /**
          * The possible targets
@@ -60,28 +83,14 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
          *
          * @type {Array}
          */
-        static get targets() { return [Annotation.CONSTRUCTOR] }
+        static get targets() { return [Annotation.DEFINITION] }
 
         /**
          * Constructor to add attributes
          * @type {Array}
          */
         constructor(data, filePath){
-          super(data, filePath)
-          /**
-           * The main value
-           *
-           * @type {String}
-           */
-          value = 'default value'
-  
-          /**
-           * An additional attribute
-           *
-           * @type {String}
-           */
-          sample = 'default value for sample'
-        
+          super(data, filePath)        
         }
         
         /**
@@ -92,7 +101,12 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
          * @return {void}
          */
         init: function(data){
-            // do something with data
+
+            // set defaults
+            this.value = data.value || 'default value'
+            this.sample = data.sample || 'default value for sample'
+
+            // do something with data (error check, etc.)
         }
         
     });
@@ -104,9 +118,9 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
     // ------------
 
     /**
-     * @MyConstructorAnnotation("some value", sample="here is an attribute value")
+     * @MyClassAnnotation("some value", sample="here is an attribute value")
      */
-    function MySample(){}
+    class HelloWorld {}
 
 ### Parse the Annotation
 
@@ -120,7 +134,7 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
     const registry = new annotations.Registry()
 
     // add annotations to the registry
-    registry.registerAnnotation(path.join(__dirname, 'my-constructor-annotation'))
+    registry.registerAnnotation(path.join(__dirname, 'my-class-annotation'))
 
     // create the annotation reader
     const reader = new annotations.Reader(registry)
@@ -138,10 +152,10 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
     constructorAnnotations.forEach(function(annotation){
 
         // @MyConstructorAnnotation
-        if (annotation.annotation === 'MyConstructorAnnotation'){
+        if (annotation.constructor.name === 'MyClassAnnotation'){
 
             // do something with the annotation data
-            console.log(annotation.target); // -> "MySample"
+            console.log(annotation.target); // -> "HelloWorld"
             console.log(annotation.value); // -> "some value"
             console.log(annotation.sample); // -> "here is an attribute value"
         }
@@ -169,17 +183,16 @@ Full example in [example folder](https://github.com/jaumard/ecmas-annotations/tr
     @MyAnnotation(foo=[@MyNestedAnnotation("nested 1"), @MyNestedAnnotation("nested 2")])
 
 ## License
-[MIT](https://github.com/jaumard/ecmas-annotations/blob/master/LICENSE)
+[MIT](https://github.com/conga/conga-annotations/blob/master/LICENSE)
 
-[npm-image]: https://img.shields.io/npm/v/ecmas-annotations.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/ecmas-annotations
-[npm-download]: https://img.shields.io/npm/dt/ecmas-annotations.svg
-[ci-image]: https://travis-ci.org/jaumard/ecmas-annotations.svg?branch=master
-[ci-url]: https://travis-ci.org/jaumard/ecmas-annotations
-[daviddm-image]: http://img.shields.io/david/jaumard/ecmas-annotations.svg?style=flat-square
-[daviddm-url]: https://david-dm.org/jaumard/ecmas-annotations
-[codeclimate-image]: https://img.shields.io/codeclimate/github/jaumard/ecmas-annotations.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github/jaumard/ecmas-annotations
-[gitter-image]: http://img.shields.io/badge/+%20GITTER-JOIN%20CHAT%20%E2%86%92-1DCE73.svg?style=flat-square
-[gitter-url]: https://gitter.im/jaumard/ecmas-annotations
+[npm-image]: https://img.shields.io/npm/v/conga-annotations.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/conga-annotations
+[npm-download]: https://img.shields.io/npm/dt/conga-annotations.svg
+[ci-image]: https://travis-ci.org/congajs/conga-annotations.svg?branch=master
+[ci-url]: https://travis-ci.org/congajs/conga-annotations
+[daviddm-image]: http://img.shields.io/david/congajs/conga-annotations.svg?style=flat-square
+[daviddm-url]: https://david-dm.org/congajs/conga-annotations
+[codeclimate-image]: https://img.shields.io/codeclimate/github/congajs/conga-annotations.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/congajs/conga-annotations
+
 
