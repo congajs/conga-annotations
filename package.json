@@ -8,7 +8,7 @@
   },
   "main": "./index.js",
   "scripts": {
-    "test": "eslint . && mocha --reporter spec test/"
+    "test": "mocha test/"
   },
   "repository": {
     "type": "git",
@@ -38,11 +38,9 @@
   },
   "devDependencies": {
     "eslint": "^3.2.0",
-    "eslint-config-trails": "^1.0.6",
     "mocha": "2.5.3"
   },
   "eslintConfig": {
-    "extends": "trails"
   },
   "engines": {
     "node": ">= 4.0.0"
