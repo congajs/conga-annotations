@@ -1,5 +1,5 @@
 {
-  "name": "conga-annotations",
+  "name": "@conga/conga-annotations",
   "version": "1.0.0",
   "description": "Annotation parser library for ES2014/ES2015, ES5/ES6",
   "homepage": "https://github.com/congajs/conga-annotations",
