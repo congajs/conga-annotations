@@ -59,7 +59,7 @@ ES5 Example:
 
 
 ## Installation
-Need Node >= 4.0.0
+Need Node >= 6.0.0
 
     > npm install @conga/annotations
 
