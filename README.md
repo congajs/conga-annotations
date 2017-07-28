@@ -1,4 +1,4 @@
-# conga-annotations 
+# conga-annotations
 
 [![NPM version][npm-image]][npm-url]
 [![NPM downloads][npm-download]][npm-url]
@@ -43,7 +43,7 @@ ES5 Example:
     function HelloWorld(){}
 
     HelloWorld.prototype = {
-        
+
         /**
          * @MyPropertyAnnotation(foo=[1,2,3,4], bar={"hello":"there"})
          */
@@ -61,11 +61,11 @@ ES5 Example:
 ## Installation
 Need Node >= 4.0.0
 
-    > npm install conga-annotations
+    > npm install @conga/annotations
 
 ## Usage
 
-Full example in [example folder](https://github.com/congajs/conga-annotations/tree/master/example) (`node main.js` to test is). 
+Full example in [example folder](https://github.com/congajs/conga-annotations/tree/master/example) (`node main.js` to test is).
 
 ### Create an Annotation
 
@@ -92,7 +92,7 @@ Full example in [example folder](https://github.com/congajs/conga-annotations/tr
         constructor(data, filePath){
           super(data, filePath)        
         }
-        
+
         /**
          * Optional initialization method that
          * can be used to transform data
@@ -108,7 +108,7 @@ Full example in [example folder](https://github.com/congajs/conga-annotations/tr
 
             // do something with data (error check, etc.)
         }
-        
+
     });
 
 
@@ -194,5 +194,3 @@ Full example in [example folder](https://github.com/congajs/conga-annotations/tr
 [daviddm-url]: https://david-dm.org/congajs/conga-annotations
 [codeclimate-image]: https://img.shields.io/codeclimate/github/congajs/conga-annotations.svg?style=flat-square
 [codeclimate-url]: https://codeclimate.com/github/congajs/conga-annotations
-
-
