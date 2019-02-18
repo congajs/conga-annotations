@@ -156,6 +156,10 @@ describe('ReaderES6:', function() {
     it('has correct value for global variable', function() {
       assert.equal(methodAnnotations[8].value.global, 'test')
     })
+
+    it('async function name is correctly selected', function() {
+      assert.equal(methodAnnotations[9].target, 'asyncMethod');
+    })
   })
 
   // property annotations

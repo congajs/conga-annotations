@@ -98,4 +98,11 @@ module.exports = class Sample {
   methodWithGlobalVariables() {
 
   }
+
+  /**
+   * @MyMethod
+   */
+  async asyncMethod() {
+
+  }
 }
