@@ -1,6 +1,6 @@
 {
   "name": "@conga/annotations",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Annotation parser library for ES2014/ES2015, ES5/ES6",
   "homepage": "https://github.com/congajs/conga-annotations",
   "directories": {
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "eslint": "^3.2.0",
-    "mocha": "^5.2.0"
+    "mocha": "^8.3.2"
   },
   "eslintConfig": {},
   "engines": {
